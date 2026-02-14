@@ -15,16 +15,13 @@
   pointer-events: none;
 }
 
-/* Scrolled state: Translucent Glass - Come richiesto */
+/* Scrolled state: Translucent Glass - Allineato al Blog */
 .sl-navbar.scrolled {
-  background: rgba(0, 0, 0, 0.45);
-  /* Molto traslucido */
-  backdrop-filter: blur(50px);
-  /* Blur elevato per effetto vetro */
-  -webkit-backdrop-filter: blur(50px);
-  border-bottom-color: rgba(255, 255, 255, 0.05);
-  /* Bordo sottile */
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+  background: rgba(15, 15, 15, 0.45);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
   transform: translateY(0);
   opacity: 1;
   padding-top: 0;
