@@ -1,0 +1,35 @@
+.sl-footer {
+    background: #000;
+    /* Set to pure black to match sections */
+    color: #ddd;
+    padding: 30px 0;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sl-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.sl-footer-left {
+    opacity: 0.9
+}
+
+.sl-footer-right {
+    opacity: 0.7
+}
+
+@media (max-width: 720px) {
+    .sl-footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px
+    }
+}

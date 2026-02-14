@@ -1,0 +1,1226 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}
+
+.smartlight-section-line {
+	width: 80%;
+	max-width: 900px;
+	margin: 0 auto;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+	opacity: 0.9;
+}
+
+/* Main Container */
+.smartlight-container {
+	background-color: #000;
+	color: #fff;
+}
+
+/* Common Section Styling */
+.smartlight-section-header {
+	text-align: center;
+	margin-bottom: 80px;
+	padding: 0 20px;
+}
+
+.smartlight-section-title {
+	font-size: 0.9rem;
+	font-weight: 700;
+	letter-spacing: 4px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.smartlight-section-subtitle {
+	font-size: 2.2rem;
+	font-weight: 600;
+	color: #fff;
+	max-width: 800px;
+	margin: 0 auto;
+	line-height: 1.2;
+}
+
+.smartlight-video-overlay {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.smartlight-video-section {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 64px 0;
+}
+
+.smartlight-video-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 400px;
+	background: #fff;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+	border-radius: 24px;
+}
+
+.smartlight-video-square {
+	width: 360px;
+	height: 360px;
+	object-fit: cover;
+	border-radius: 16px;
+	background: #000;
+}
+
+.smartlight-project-section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	min-height: 480px;
+	background: #fff;
+	padding: 48px 5vw;
+	box-sizing: border-box;
+	max-width: 1400px;
+	margin: 0 auto;
+	gap: 5%;
+	color: #222;
+}
+
+.smartlight-project-media {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+}
+
+.smartlight-video-container {
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	aspect-ratio: 1 / 1;
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.smartlight-video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(128, 128, 128, 0.75);
+	/* Grigio molto opaco, quasi per nulla trasparente */
+	z-index: 2;
+	pointer-events: none;
+}
+
+.smartlight-project-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.smartlight-project-text {
+	flex: 2;
+	padding: 0 5% 0 0;
+	color: #222;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 280px;
+}
+
+.smartlight-project-text h2 {
+	font-size: 2rem;
+	margin-bottom: 18px;
+	font-weight: bold;
+}
+
+.smartlight-project-text p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+	.smartlight-project-section {
+		flex-direction: column;
+		gap: 24px;
+		padding: 32px 0;
+	}
+
+	.smartlight-project-media {
+		align-items: center;
+		gap: 16px;
+	}
+
+	.smartlight-project-img,
+	.smartlight-project-video {
+		width: 90vw;
+		max-width: 340px;
+		height: 180px;
+	}
+
+	.smartlight-project-text {
+		padding: 0 12px;
+		min-width: unset;
+		align-items: center !important;
+		text-align: center !important;
+	}
+}
+
+.smartlight-analysis-media {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.smartlight-cover {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	margin: 0;
+}
+
+.smartlight-cover-container {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	max-width: 1400px;
+	height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	text-align: left;
+}
+
+.smartlight-cover:has(.smartlight-cover-content-centered) .smartlight-cover-container {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Merged section specific layout */
+.smartlight-cover-container.combined-layout {
+	height: auto;
+	min-height: 100vh;
+	justify-content: center;
+	padding: 100px 5vw;
+}
+
+.smartlight-cover-container.combined-layout .smartlight-dual-content {
+	margin-top: 40px;
+}
+
+.smartlight-cover-video-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 1s ease;
+	will-change: opacity;
+	/* Optimize fade-in */
+}
+
+.smartlight-cover-video-bg.loaded {
+	opacity: 1;
+}
+
+.smartlight-cover-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(40, 40, 40, 0.7);
+	/* Grigio scuro opaco per contrasto */
+	z-index: 2;
+}
+
+.smartlight-cover-content {
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #fff;
+}
+
+.smartlight-cover-content-centered {
+	max-width: 1000px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	justify-content: center;
+	height: 100%;
+}
+
+.smartlight-cover-content-centered .smartlight-cover-desc {
+	text-align: center;
+	max-width: 900px;
+	font-size: 1.3rem;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.smartlight-cover-content-centered .smartlight-cover-desc strong {
+	color: #fff;
+	font-weight: 600;
+}
+
+/* Dual Column Layout for Problem/Opportunity */
+.smartlight-dual-content {
+	display: flex;
+	gap: 80px;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: stretch;
+	position: relative;
+}
+
+.smartlight-dual-column {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 50px 60px;
+	/* Aumentato il padding laterale per dare aria ai bordi */
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(4px);
+	will-change: transform, background, border-color;
+	transition:
+		transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+		background 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+		border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.smartlight-dual-column:hover {
+	background: rgba(255, 255, 255, 0.07);
+	transform: translateY(-12px);
+	border-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Divisore verticale SpaceX-style */
+.smartlight-dual-content::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	bottom: 10%;
+	width: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateX(-50%);
+}
+
+.smartlight-dual-title {
+	font-size: 0.9rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.smartlight-dual-subtitle {
+	font-size: 2rem;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 40px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	min-height: 4.8rem;
+	/* Allinea i contenuti */
+}
+
+.smartlight-dual-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding-inline-start: 0;
+	/* Forza il reset */
+}
+
+.smartlight-dual-list li {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 28px;
+	padding-left: 0;
+	margin-left: 0;
+	position: relative;
+}
+
+/* Indicatori tecnici SpaceX style distanziati dal bordo */
+.smartlight-dual-list li::before {
+	content: '';
+	position: absolute;
+	left: -35px;
+	/* Bilanciato tra il bordo (60px) e il testo */
+	top: 14px;
+	width: 15px;
+	height: 1px;
+	background: #fff;
+	opacity: 0.3;
+}
+
+.smartlight-dual-list li strong {
+	color: #fff;
+	display: block;
+	margin-bottom: 6px;
+	font-size: 1.1rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+	.smartlight-dual-content {
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.smartlight-dual-content::after {
+		display: none;
+	}
+
+	.smartlight-dual-column {
+		padding: 30px;
+	}
+
+	.smartlight-dual-subtitle {
+		min-height: auto;
+		font-size: 1.6rem;
+	}
+}
+
+.smartlight-cover-divider {
+	width: 60px;
+	height: 1px;
+	background: #fff;
+	margin: 24px auto 32px auto;
+	opacity: 0.6;
+}
+
+.smartlight-scroll-indicator {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	z-index: 10;
+	transition: opacity 0.3s ease;
+}
+
+.smartlight-scroll-indicator svg {
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	animation: bounceSpaceX 0.8s infinite;
+}
+
+@keyframes bounceSpaceX {
+
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-10px);
+	}
+
+	60% {
+		transform: translateY(-5px);
+	}
+}
+
+.smartlight-scroll-indicator:hover {
+	opacity: 0.7;
+}
+
+.smartlight-cover-title {
+	font-size: 4.5rem;
+	font-weight: 700;
+	margin-bottom: 8px;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	color: #fff;
+}
+
+.smartlight-cover-desc {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	color: #fff;
+	font-weight: 400;
+	/* Tolto il grassetto */
+	max-width: 800px;
+	text-transform: none;
+}
+
+.smartlight-cover-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 0;
+	color: #fff;
+	padding: 18px 50px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#smartlight-fullpage section {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	scroll-snap-align: start;
+	scroll-margin-top: 30px;
+	/* Reduced offset for thinner navbar */
+}
+
+.smartlight-cover-btn:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+/* TECHNOLOGY SECTION ENHANCEMENTS - MISSION CONTROL HUD */
+.tech-section {
+	background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+	position: relative;
+	overflow: hidden;
+}
+
+.tech-section .smartlight-cover-video-bg {
+	animation: techMapDrift 40s ease-in-out infinite alternate;
+	filter: contrast(1.05) brightness(1.05);
+	will-change: transform;
+	/* Hardware accelerate map drift */
+}
+
+@keyframes techMapDrift {
+	0% {
+		transform: scale(1) translate(0, 0);
+	}
+
+	100% {
+		transform: scale(1.1) translate(1%, 1%);
+	}
+}
+
+
+.tech-section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+	background-size: 50px 50px;
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* Ethereal Wave Overlay */
+.tech-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.0) 80%);
+	z-index: 2;
+	pointer-events: none;
+	animation: etherealWave 8s infinite ease-in-out;
+	opacity: 0.6;
+}
+
+@keyframes etherealWave {
+	0% {
+		transform: scale(1);
+		opacity: 0.4;
+	}
+
+	50% {
+		transform: scale(1.5);
+		opacity: 0.2;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0.4;
+	}
+}
+
+/* HUD Overlay */
+.smartlight-tech-hud-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 3;
+}
+
+/* HUD Overlay */
+.smartlight-tech-hud-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 3;
+}
+
+.scan-line {
+	position: absolute;
+	top: 0;
+	/* Fixed top, animate transform instead */
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+	transform: translateY(-100%);
+	animation: scanLines 8s linear infinite;
+	will-change: transform;
+}
+
+@keyframes scanLines {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(100vh);
+		/* Move across viewport height */
+	}
+}
+
+.tech-section .smartlight-cover-container {
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding-left: 0;
+	margin-left: 5vw;
+	/* Slightly shifted right */
+	text-align: left;
+	max-width: 100%;
+}
+
+.hud-corner {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	transition: all 0.5s ease;
+}
+
+.top-left {
+	top: 40px;
+	left: 40px;
+	border-right: 0;
+	border-bottom: 0;
+}
+
+.top-right {
+	top: 40px;
+	right: 40px;
+	border-left: 0;
+	border-bottom: 0;
+}
+
+.bottom-left {
+	bottom: 40px;
+	left: 40px;
+	border-right: 0;
+	border-top: 0;
+}
+
+.bottom-right {
+	bottom: 10px;
+	right: 10px;
+	border-left: 0;
+	border-top: 0;
+}
+
+.hud-stats {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 0.75rem;
+	color: rgba(0, 0, 0, 0.5);
+	text-align: right;
+	letter-spacing: 2px;
+}
+
+
+
+.stat-item {
+	position: relative;
+	padding-right: 20px;
+}
+
+.stat-item::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 8px;
+	height: 1px;
+	background: currentColor;
+}
+
+/* Glass Card Enhanced */
+.smartlight-tech-glass-card {
+	background: rgba(255, 255, 255, 0.45);
+	backdrop-filter: blur(55px);
+	-webkit-backdrop-filter: blur(55px);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	padding: 100px 80px;
+	max-width: 800px;
+	width: 95%;
+	box-shadow: 0 40px 120px rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+	margin-left: 0;
+	/* Already left due to container justification, but ensuring reset */
+}
+
+.tech-card-glow {
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: radial-gradient(circle at center, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
+	pointer-events: none;
+	animation: rotateGlow 20s linear infinite;
+	will-change: transform;
+}
+
+@keyframes rotateGlow {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.smartlight-tech-glass-card:hover {
+	background: rgba(255, 255, 255, 0.55);
+	/* Removed shadow animation for performance, kept opacity change */
+}
+
+.smartlight-tech-title {
+	font-size: 4.5rem;
+	font-weight: 950;
+	color: #000;
+	margin-bottom: 20px;
+	letter-spacing: -4px;
+	text-transform: uppercase;
+	line-height: 0.9;
+}
+
+.smartlight-tech-divider {
+	width: 100px;
+	height: 4px;
+	background: #000;
+	margin-bottom: 50px;
+}
+
+.smartlight-tech-main-description {
+	font-size: 1.4rem;
+	line-height: 1.7;
+	color: #000;
+	margin-bottom: 60px;
+	max-width: 100%;
+	font-weight: 500;
+}
+
+/* Premium Solid Button - Fixed arrow animation */
+.tech-btn-premium-solid {
+	background: #000 !important;
+	color: #fff !important;
+	border: 1px solid #000;
+	padding: 22px 50px;
+	font-size: 1rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+	transition: all 0.3s ease;
+	border-radius: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.tech-btn-premium-solid:hover {
+	background: #222 !important;
+	/* Removed padding change to stop elongation */
+}
+
+.tech-btn-premium-solid svg {
+	width: 20px;
+	height: 20px;
+	stroke: #fff !important;
+	fill: none;
+	/* Removed conflicting transitions */
+}
+
+/* Use the same animation class as other buttons for consistency */
+.tech-btn-premium-solid:hover svg {
+	animation: arrowSlideRightSpaceX 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 900px) {
+	.smartlight-tech-glass-card {
+		padding: 60px 30px;
+		width: 92%;
+		text-align: center;
+		align-items: center;
+	}
+
+	.smartlight-tech-title {
+		font-size: 2.8rem;
+		letter-spacing: -2px;
+	}
+
+	.smartlight-tech-main-description {
+		font-size: 1.1rem;
+	}
+
+	.hud-stats,
+	.hud-corner {
+		display: none;
+	}
+}
+
+.smartlight-cover-btn svg {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+/* Animazioni frecce */
+.smartlight-cover-btn.btn-down:hover svg {
+	animation: arrowSlideDownSpaceX 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smartlight-cover-btn.btn-right:hover svg {
+	animation: arrowSlideRightSpaceX 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes arrowSlideDownSpaceX {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	45% {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+
+	46% {
+		transform: translateY(-40px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes arrowSlideRightSpaceX {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	45% {
+		transform: translateX(40px);
+		opacity: 0;
+	}
+
+	46% {
+		transform: translateX(-40px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Mobile responsive styles - MUST come after for override */
+@media (max-width: 900px) {
+	.smartlight-cover {
+		min-height: 80vh;
+	}
+
+	.smartlight-cover-container {
+		align-items: center;
+		text-align: center;
+		padding-bottom: 15vh;
+	}
+
+	.smartlight-cover-title {
+		font-size: 2.8rem;
+		letter-spacing: 0;
+	}
+
+	.smartlight-cover-desc {
+		font-size: 0.9rem;
+	}
+
+	.smartlight-cover-btn {
+		padding: 15px 40px;
+		width: 80%;
+	}
+}
+
+/* Hide old elements */
+.smartlight-cover-line {
+	display: none;
+}
+
+/* ROADMAP SECTION */
+.smartlight-roadmap-section {
+	padding: 160px 0;
+	background: #000;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.smartlight-roadmap-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	position: relative;
+	padding: 40px 5vw;
+}
+
+.smartlight-roadmap-line {
+	position: absolute;
+	top: 50px;
+	left: 5vw;
+	right: 5vw;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.1);
+	z-index: 1;
+}
+
+.smartlight-roadmap-items {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+	position: relative;
+	z-index: 2;
+}
+
+.smartlight-roadmap-item {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.smartlight-roadmap-number {
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 24px;
+	background: #000;
+	width: fit-content;
+	padding-right: 15px;
+}
+
+.smartlight-roadmap-label {
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.smartlight-roadmap-text {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.6);
+	margin-bottom: 24px;
+}
+
+.smartlight-roadmap-duration {
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: rgba(255, 255, 255, 0.4);
+	margin-top: auto;
+}
+
+/* RESULTS SECTION */
+.smartlight-results-section {
+	padding: 160px 5vw;
+	background: #000;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.smartlight-results-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2px;
+	max-width: 1400px;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.05);
+	/* Spessore linea griglia */
+}
+
+.smartlight-result-card {
+	background: #000;
+	padding: 60px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.smartlight-result-value {
+	font-size: 4rem;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 16px;
+	letter-spacing: -2px;
+}
+
+.smartlight-result-label {
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+}
+
+.smartlight-results-disclaimer {
+	text-align: center;
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.3);
+	margin-top: 60px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5;
+}
+
+/* COLLABORATION SECTION */
+.smartlight-collab-section {
+	padding: 160px 0;
+	background: #000;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.smartlight-collab-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+	filter: brightness(0.4) blur(4px);
+	transform: scale(1.1);
+	/* To hide blur edges */
+}
+
+.smartlight-collab-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+	z-index: 2;
+}
+
+.smartlight-collab-container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 5vw;
+	position: relative;
+	z-index: 3;
+}
+
+.smartlight-collab-title {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 24px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.smartlight-collab-desc {
+	font-size: 1.2rem;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 60px;
+	line-height: 1.5;
+}
+
+.smartlight-collab-actions {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+@media (max-width: 1000px) {
+
+	.smartlight-roadmap-items,
+	.smartlight-results-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.smartlight-roadmap-line {
+		display: none;
+	}
+
+	.smartlight-collab-actions {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.smartlight-roadmap-items,
+	.smartlight-results-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.smartlight-section-subtitle {
+		font-size: 1.6rem;
+	}
+}
+
+/* Update transition timings (+5%) */
+.smartlight-cover-bg {
+	transition: filter 683ms ease-out, transform 683ms ease-out, opacity 683ms ease-out;
+}
+
+.bici-img {
+	transition: filter 441ms ease-out, transform 441ms ease-out, opacity 441ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.bici-img,
+	.bici-img.loaded {
+		transition: none !important;
+		filter: none !important;
+		transform: none !important;
+	}
+}
+
+/* Ensure cover bottom arrows are visible above the background image */
+
+/* Tecnologia Section - Black Elements & White Hover */
+.tech-section .smartlight-cover-title,
+.tech-section .smartlight-cover-desc {
+	color: #000 !important;
+	text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+	/* Subtle lift */
+}
+
+.tech-section .smartlight-cover-divider {
+	background: #000 !important;
+}
+
+.tech-btn {
+	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.tech-btn:hover {
+	background-color: #000 !important;
+	color: #fff !important;
+	border-color: #000 !important;
+}
+
+.tech-btn:hover svg {
+	color: #fff !important;
+	animation: arrowSlideRightSpaceX 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.smartlight-cover-arrows-bottom {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 6;
+	/* above cover bg (which uses z-index:1) and cover content (z-index:2) */
+	pointer-events: auto;
+}

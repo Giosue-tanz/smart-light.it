@@ -1,0 +1,289 @@
+import React, { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './SmartLightPage.css';
+
+import BiciBg from '../../assets/bici1.jpg';
+import CarpisaVideo from '../../assets/carpisa.mp4';
+import Topografia from '../../assets/tech2.png';
+import SmartPdf from '../../assets/Smartlight.pdf';
+import CoverVideo from '../../assets/VideoC6.mp4';
+import TechImg from '../../assets/tech.png';
+import SmartLightNavbar from './SmartLightNavbar';
+import SmartLightFooter from './SmartLightFooter';
+import ProblemCoverVideo from '../../assets/VideoC3.mp4';
+import HowItWorksVideo from '../../assets/VideoC6.mp4';
+import BusinessModelVideo from '../../assets/VideoC5.mp4';
+import CollabVideo from '../../assets/VideoCC.mp4';
+
+export default function SmartLightPage() {
+    const navigate = useNavigate();
+    // Funzione scroll fluido
+    const handleArrowClick = (targetSelector, extraOffset = 0) => {
+        const section = document.querySelector(targetSelector);
+        if (section) {
+            const top = section.getBoundingClientRect().top + window.pageYOffset - extraOffset;
+            window.scrollTo({
+                top: top,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const [biciLoaded, setBiciLoaded] = useState(false);
+    const [coverLoaded, setCoverLoaded] = useState(false);
+    const [problemCoverLoaded, setProblemCoverLoaded] = useState(false);
+    const [howItWorksLoaded, setHowItWorksLoaded] = useState(false);
+    const [businessModelLoaded, setBusinessModelLoaded] = useState(false);
+
+    // Scarica il PDF Smartlight.pdf dalla cartella assets
+    const handleDownloadPdf = () => {
+        // Use imported asset URL (Vite will replace with the correct path during build)
+        const url = SmartPdf;
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Smartlight.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    };
+
+    // Apri la pagina contatti
+    const handleRequestPartnership = () => {
+        navigate('/contact');
+    };
+
+    useEffect(() => {
+        // Ensure the page starts scrolled to top so the navbar begins transparent
+        try { window.scrollTo(0, 0); } catch (e) { }
+        // Preload assets programmatically to prioritize critical media
+        try {
+            const createPreload = (href, asType) => {
+                if (!document.querySelector(`link[rel="preload"][href="${href}"]`)) {
+                    const link = document.createElement('link');
+                    link.rel = 'preload';
+                    link.href = href;
+                    link.as = asType;
+                    // optional: link.crossOrigin = 'anonymous';
+                    document.head.appendChild(link);
+                }
+            };
+            createPreload(Topografia, 'image');
+            createPreload(BiciBg, 'image');
+            createPreload(CarpisaVideo, 'video');
+        } catch (e) {
+            // ignore
+        }
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -25% 0px', // trigger when section nears viewport (earlier)
+            threshold: 0 // trigger as soon as any part intersects
+        };
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // add in-view immediately for smoother animation start
+                    entry.target.classList.add('in-view');
+                    obs.unobserve(entry.target); // animazione solo la prima volta
+                }
+            });
+        }, observerOptions);
+
+        const targets = document.querySelectorAll('.observe-animate');
+        targets.forEach(t => observer.observe(t));
+
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div id="smartlight-top" className="smartlight-container">
+            {/* Preload background image to avoid delayed background rendering */}
+            <img src={Topografia} alt="" style={{ display: 'none' }} loading="eager" fetchpriority="high" aria-hidden="true" />
+            <SmartLightNavbar />
+            {/* Cover in alto - ora con layout split */}
+            <section id="smartlight-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '0ms' }}>
+                <video
+                    src={CoverVideo}
+                    className={`smartlight-cover-video-bg ${coverLoaded ? 'loaded' : 'loading'}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={Topografia}
+                    onLoadedData={() => setCoverLoaded(true)}
+                />
+                <div className="smartlight-cover-overlay"></div>
+                <div className="smartlight-cover-container">
+                    <div className="smartlight-cover-content">
+                        <h1 className="smartlight-cover-title">SMART LIGHT</h1>
+                        <p className="smartlight-cover-desc">
+                            Un sistema intelligente per ottimizzare la mobilità urbana, ridurre le emissioni e migliorare la sicurezza stradale. Aggiornamento della tua rete urbana è qui.
+                        </p>
+                        <button className="smartlight-cover-btn btn-down" onClick={() => handleArrowClick('#smartlight-combined-cover', 0)}>
+                            MORE
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Combined Cover - Goals + Problem/Opportunity (Video C3) */}
+            <section id="smartlight-combined-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '150ms' }}>
+                <video
+                    src={ProblemCoverVideo}
+                    className={`smartlight-cover-video-bg ${problemCoverLoaded ? 'loaded' : 'loading'}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={BiciBg}
+                    onLoadedData={() => setProblemCoverLoaded(true)}
+                />
+                <div className="smartlight-cover-overlay" style={{ background: 'rgba(10, 10, 10, 0.65)' }}></div>
+                <div className="smartlight-cover-container combined-layout">
+                    {/* Part 1: Goals */}
+                    <div className="smartlight-cover-content-centered" style={{ marginBottom: '80px', marginTop: '60px' }}>
+                        <h1 className="smartlight-cover-title">OBIETTIVO DEL PROGETTO</h1>
+                        <div className="smartlight-cover-divider"></div>
+                        <p className="smartlight-cover-desc" style={{ maxWidth: '900px' }}>
+                            Ottimizzare i tempi di attesa e la sicurezza ai semafori urbani, migliorando la <strong>fluidità del traffico</strong> e garantendo la <strong>sicurezza dei pedoni</strong>. Il sistema utilizza <strong>intelligenza artificiale</strong> per una gestione dinamica e sostenibile.
+                        </p>
+                    </div>
+
+                    {/* Part 2: Problem/Opportunity pillars */}
+                    <div className="smartlight-dual-content">
+                        <div className="smartlight-dual-column">
+                            <h2 className="smartlight-dual-title">THE PROBLEM</h2>
+                            <h3 className="smartlight-dual-subtitle">Inefficienza & Liability Ambientale</h3>
+                            <ul className="smartlight-dual-list">
+                                <li><strong>Asset Saturi</strong> I sistemi statici sprecano il 40% della capacità, creando colli di bottiglia artificiali.</li>
+                                <li><strong>Rischio Normativo</strong> Multe ESG (Environmental, Social, and Governance) e pressioni Green Deal rendono lo "Stop-and-Go" una passività finanziaria.</li>
+                                <li><strong>Dispersione Valore</strong> La congestione agisce come una tassa occulta su PIL, carburante e logistica urbana.</li>
+                            </ul>
+                        </div>
+                        <div className="smartlight-dual-column">
+                            <h2 className="smartlight-dual-title">THE OPPORTUNITY</h2>
+                            <h3 className="smartlight-dual-subtitle">Flussi & Monetizzazione Green</h3>
+                            <ul className="smartlight-dual-list">
+                                <li><strong>Asset Ambientali</strong> Trasformiamo il risparmio di CO2 in Crediti di Carbonio monetizzabili.</li>
+                                <li><strong>Upgrade</strong> Aumentiamo la capacità via software su hardware esistente con ROI (Return on Investment) immediato.</li>
+                                <li><strong>Compliance ESG</strong> KPI (Key Performance Indicators) granulari per l'accesso a fondi "Green" e obiettivi di sostenibilità certi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Quinta Cover - Business Model */}
+            <section id="smartlight-business-model" className="smartlight-cover observe-animate" style={{ '--animate-delay': '210ms' }}>
+                <video
+                    src={BusinessModelVideo}
+                    className={`smartlight-cover-video-bg ${businessModelLoaded ? 'loaded' : 'loading'}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={BiciBg}
+                    onLoadedData={() => setBusinessModelLoaded(true)}
+                />
+                <div className="smartlight-cover-overlay" style={{ background: 'rgba(0, 0, 0, 0.6)' }}></div>
+                <div className="smartlight-cover-container">
+                    <div className="smartlight-cover-content-centered">
+                        <h1 className="smartlight-cover-title">BUSINESS MODEL</h1>
+                        <div className="smartlight-cover-divider" style={{ background: '#fff' }}></div>
+                        <p className="smartlight-cover-desc">
+                            SmartLight introduce il modello <strong>Safety as a Service (SaaS)</strong> per la mobilità urbana. Attraverso la monetizzazione dei <strong>Carbon Credits</strong> generati dalla riduzione delle emissioni e l'ottimizzazione dei costi energetici, offriamo una soluzione con <strong>ROI accelerato</strong> e scalabilità modulare per le amministrazioni pubbliche.
+                        </p>
+                        <button className="smartlight-cover-btn btn-right" onClick={() => navigate('/business-plan')} style={{ marginTop: '40px' }}>
+                            ESPLORA
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Quarta Cover - Tecnologia */}
+            <section id="smartlight-how-it-works-cover" className="smartlight-cover observe-animate tech-section" style={{ '--animate-delay': '230ms' }}>
+                <img
+                    src={Topografia}
+                    alt=""
+                    className="smartlight-cover-video-bg loaded"
+                    style={{ objectFit: 'cover' }}
+                />
+                <div className="smartlight-cover-container combined-layout">
+                    {/* HUD Decorative Elements */}
+                    <div className="smartlight-tech-hud-overlay">
+                        <div className="hud-line scan-line"></div>
+                        <div className="hud-corner top-left"></div>
+                        <div className="hud-corner top-right"></div>
+                        <div className="hud-corner bottom-left"></div>
+                        <div className="hud-corner bottom-right"></div>
+                        <div className="hud-stats">
+                            <span className="stat-item">LAT: 43.7167° N</span>
+                            <span className="stat-item">LNG: 10.4000° E</span>
+                            <span className="stat-item">STATUS: AI_ACTIVE</span>
+                        </div>
+                    </div>
+
+                    <div className="smartlight-tech-glass-card">
+                        <div className="tech-card-glow"></div>
+                        <h1 className="smartlight-tech-title">TECNOLOGIA</h1>
+                        <div className="smartlight-tech-divider"></div>
+
+                        <p className="smartlight-tech-main-description">
+                            Trasformiamo i dati visivi in flussi urbani fluidi e sicuri tramite una rete neurale proprietaria addestrata su topologie reali.
+                        </p>
+
+                        <button
+                            className="smartlight-cover-btn tech-btn-premium-solid"
+                            onClick={() => navigate('/technology')}
+                        >
+                            ESPLORA
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sezione Collaborazione */}
+            <section id="smartlight-collab" className="smartlight-collab-section observe-animate" style={{ '--animate-delay': '250ms' }}>
+                <video
+                    className="smartlight-collab-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                >
+                    <source src={CollabVideo} type="video/mp4" />
+                </video>
+                <div className="smartlight-collab-overlay"></div>
+
+                <div className="smartlight-collab-container">
+                    <h2 className="smartlight-collab-title">CONTATTACI</h2>
+                    <p className="smartlight-collab-desc">Unisciti al progetto SmartLight. Insieme possiamo creare una città più intelligente e sostenibile per tutti.</p>
+                    <div className="smartlight-collab-actions">
+                        <button className="smartlight-cover-btn btn-right" onClick={handleRequestPartnership}>
+                            AGGIORNA LA CITTÀ
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                        <button className="smartlight-cover-btn btn-right" onClick={handleRequestPartnership}>
+                            LAVORA CON NOI
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <SmartLightFooter />
+        </div>
+    );
+}

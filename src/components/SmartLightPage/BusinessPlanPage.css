@@ -1,0 +1,437 @@
+.business-plan-page {
+    background: #f8f9fa;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.bp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* HERO */
+.bp-hero {
+    padding: 180px 0 100px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    text-align: center;
+}
+
+.bp-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.bp-subtitle {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* STRATEGY GRID */
+.bp-content {
+    padding: 80px 0;
+}
+
+.bp-strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.bp-phase-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 60px 40px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.bp-phase-card.highlight {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.bp-phase-card:hover {
+    transform: translateY(-12px);
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.bp-phase-num {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 3rem;
+    font-weight: 800;
+    opacity: 0.05;
+    color: #000;
+}
+
+.bp-phase-card h2 {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.bp-phase-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.bp-phase-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+.bp-phase-metrics {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.bp-phase-metrics span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.bp-phase-card:hover .bp-phase-metrics span {
+    transform: scale(1.05);
+}
+
+/* ROADMAP */
+.bp-roadmap-section {
+    padding: 120px 0;
+    background: #ffffff;
+}
+
+.bp-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #000;
+}
+
+.bp-roadmap-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 40px;
+}
+
+.bp-roadmap-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.bp-roadmap-item {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.bp-item-dot {
+    position: absolute;
+    left: -46px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.bp-roadmap-item.active .bp-item-dot {
+    background: #000;
+    border-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.3);
+}
+
+.bp-item-content h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.bp-roadmap-item.active h4 {
+    color: #000;
+}
+
+.bp-item-content p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+}
+
+/* RESULTS */
+.bp-results-section {
+    padding: 120px 0;
+}
+
+.bp-results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.bp-result-card {
+    text-align: center;
+}
+
+.bp-result-value {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -3px;
+    color: #000;
+}
+
+.bp-result-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.bp-results-disclaimer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.45);
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* LEGAL */
+.bp-legal-section {
+    padding: 120px 0;
+    background: #f1f3f5;
+}
+
+.bp-legal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bp-legal-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 4px;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.bp-legal-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.bp-legal-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* BUTTONS - Scoped to Business Plan Page */
+.business-plan-page .smartlight-cover-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 0;
+    color: #000;
+    padding: 18px 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.business-plan-page .smartlight-cover-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.smartlight-cover-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.smartlight-cover-btn.btn-right:hover svg {
+    animation: slideRight 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+
+    46% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* CTA */
+.bp-cta {
+    padding: 100px 0 150px;
+    text-align: center;
+}
+
+/* COLLABORATION SECTION */
+.business-plan-page .smartlight-collab-section {
+    padding: 160px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.business-plan-page .smartlight-collab-section .smartlight-cover-btn {
+    border-color: #fff;
+    color: #fff;
+}
+
+.business-plan-page .smartlight-collab-section .smartlight-cover-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.business-plan-page .smartlight-collab-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.4) blur(4px);
+    transform: scale(1.1);
+    /* To hide blur edges */
+}
+
+.business-plan-page .smartlight-collab-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+}
+
+.business-plan-page .smartlight-collab-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5vw;
+    position: relative;
+    z-index: 3;
+}
+
+.business-plan-page .smartlight-collab-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.business-plan-page .smartlight-collab-desc {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 60px;
+    line-height: 1.6;
+}
+
+.business-plan-page .smartlight-collab-actions {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+
+    .bp-strategy-grid,
+    .bp-results-grid,
+    .business-plan-page .smartlight-collab-actions {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .bp-title {
+        font-size: 2.8rem;
+    }
+
+    .business-plan-page .smartlight-collab-title {
+        font-size: 2.5rem;
+    }
+
+    .business-plan-page .smartlight-cover-btn {
+        width: 100%;
+    }
+}
