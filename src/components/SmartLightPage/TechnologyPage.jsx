@@ -63,7 +63,7 @@ const TechnologyPage = () => {
                 <div className="tech-container">
                     <div className="tech-hero-content">
                         <span className="tech-badge">CORE TECHNOLOGY</span>
-                        <h1 className="tech-title">INTELLIGENZA<br />ADATTIVA</h1>
+                        <h1 className="tech-title">Smart Light AI</h1>
                         <p className="tech-subtitle">
                             Un sistema neurale proprietario che apprende, si adatta e si evolve continuamente
                             per trasformare ogni incrocio in un nodo intelligente della rete urbana.
