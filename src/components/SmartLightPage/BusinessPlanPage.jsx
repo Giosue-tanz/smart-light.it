@@ -50,8 +50,8 @@ const BusinessPlanPage = () => {
                             <h3>Efficienza Immediata</h3>
                             <p>Iniziamo con un servizio di analisi non invasiva dell'infrastruttura. L'hardware osserva passivamente il traffico, simula scenari di ottimizzazione e genera report dettagliati per la PA, validando il potenziale risparmio prima di ogni intervento diretto.</p>
                             <div className="bp-phase-metrics">
-                                <span>Rischio Zero</span>
-                                <span>Basso Costo d'Ingresso</span>
+                                <span>Risk-Free</span>
+                                <span>Low Entry Cost</span>
                             </div>
                         </div>
 
@@ -61,8 +61,8 @@ const BusinessPlanPage = () => {
                             <h3>Evoluzione Consapevole</h3>
                             <p>Una volta confermati i benefici di tempo e CO2, abilitiamo il controllo attivo dei cicli semaforici tramite l'intelligenza centrale. Sfruttiamo l'hardware già installato, trasformandolo in un sistema adattivo in tempo reale senza ulteriori costi infrastrutturali.</p>
                             <div className="bp-phase-metrics">
-                                <span>Servizio Ricorrente</span>
-                                <span>Benefici Comprovati</span>
+                                <span>Recurring Service</span>
+                                <span>Proven Results</span>
                             </div>
                         </div>
 
@@ -72,8 +72,8 @@ const BusinessPlanPage = () => {
                             <h3>Data Driven Future</h3>
                             <p>Attraverso la rete capillare di incroci, SmartLight si evolve nel sistema nervoso digitale della città, fornendo dati strategici per lo sviluppo urbano, la logistica intelligente e la sicurezza stradale predittiva.</p>
                             <div className="bp-phase-metrics">
-                                <span>Asset Strategico</span>
-                                <span>Effetto di Rete</span>
+                                <span>Intellectual Asset</span>
+                                <span>Network Effect</span>
                             </div>
                         </div>
                     </div>
