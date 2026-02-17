@@ -36,7 +36,7 @@ const BusinessPlanPage = () => {
 
             <section className="bp-hero">
                 <div className="bp-container">
-                    <h1 className="bp-title">BUSINESS STRATEGY</h1>
+                    <h1 className="bp-title">STRATEGIA DI BUSINESS</h1>
                     <p className="bp-subtitle">Hardware-Enabled SaaS: L'approccio Land & Expand per la Smart City</p>
                 </div>
             </section>
@@ -50,8 +50,8 @@ const BusinessPlanPage = () => {
                             <h3>Efficienza Immediata</h3>
                             <p>Iniziamo con un servizio di analisi non invasiva dell'infrastruttura. L'hardware osserva passivamente il traffico, simula scenari di ottimizzazione e genera report dettagliati per la PA, validando il potenziale risparmio prima di ogni intervento diretto.</p>
                             <div className="bp-phase-metrics">
-                                <span>Risk-Free</span>
-                                <span>Low Entry Cost</span>
+                                <span>Rischio Zero</span>
+                                <span>Basso Costo d'Ingresso</span>
                             </div>
                         </div>
 
@@ -61,8 +61,8 @@ const BusinessPlanPage = () => {
                             <h3>Evoluzione Consapevole</h3>
                             <p>Una volta confermati i benefici di tempo e CO2, abilitiamo il controllo attivo dei cicli semaforici tramite l'intelligenza centrale. Sfruttiamo l'hardware già installato, trasformandolo in un sistema adattivo in tempo reale senza ulteriori costi infrastrutturali.</p>
                             <div className="bp-phase-metrics">
-                                <span>Recurring Service</span>
-                                <span>Proven ROi</span>
+                                <span>Servizio Ricorrente</span>
+                                <span>Benefici Comprovati</span>
                             </div>
                         </div>
 
@@ -72,8 +72,8 @@ const BusinessPlanPage = () => {
                             <h3>Data Driven Future</h3>
                             <p>Attraverso la rete capillare di incroci, SmartLight si evolve nel sistema nervoso digitale della città, fornendo dati strategici per lo sviluppo urbano, la logistica intelligente e la sicurezza stradale predittiva.</p>
                             <div className="bp-phase-metrics">
-                                <span>Intellectual Asset</span>
-                                <span>Network Effect</span>
+                                <span>Asset Strategico</span>
+                                <span>Effetto di Rete</span>
                             </div>
                         </div>
                     </div>
@@ -87,28 +87,28 @@ const BusinessPlanPage = () => {
                         <div className="bp-roadmap-item">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
-                                <h4>PHASE 3.1 (COMPLETED)</h4>
+                                <h4>FASE 3.1 (COMPLETATA)</h4>
                                 <p>Deep RL Agents (PPO/DQN) con accelerazione CUDA su hardware locale.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item active">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
-                                <h4>PHASE 3.5 (CURRENT)</h4>
+                                <h4>FASE 3.5 (IN CORSO)</h4>
                                 <p>Integrazione con SUMO per simulazioni fisiche realistiche e validazione su topologia reale del primo scenario urbano.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
-                                <h4>PHASE 4.0 (MAR 2026)</h4>
+                                <h4>FASE 4.0 (MAR 2026)</h4>
                                 <p>Multi-Agent Coordination: Grid of connected intersections e comunicazione.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
-                                <h4>PHASE 5.0 (APR 2026)</h4>
+                                <h4>FASE 5.0 (APR 2026)</h4>
                                 <p>Real-World Deployment: Computer Vision via YOLOv8 su NVIDIA Jetson Edge devices.</p>
                             </div>
                         </div>
@@ -122,23 +122,19 @@ const BusinessPlanPage = () => {
                     <div className="bp-results-grid">
                         <div className="bp-result-card">
                             <span className="bp-result-value">-30%</span>
-                            <span className="bp-result-label">CO2 EMISSIONS</span>
+                            <span className="bp-result-label">EMISSIONI DI CO2</span>
                         </div>
                         <div className="bp-result-card">
                             <span className="bp-result-value">-25%</span>
-                            <span className="bp-result-label">WAITING TIME</span>
+                            <span className="bp-result-label">TEMPI DI ATTESA</span>
                         </div>
                         <div className="bp-result-card">
                             <span className="bp-result-value">+20%</span>
-                            <span className="bp-result-label">THROUGHPUT</span>
-                        </div>
-                        <div className="bp-result-card">
-                            <span className="bp-result-value">14m</span>
-                            <span className="bp-result-label">AVG ROI (Return on Investment)</span>
+                            <span className="bp-result-label">FLUSSO DI TRAFFICO</span>
                         </div>
                     </div>
                     <p className="bp-results-disclaimer">
-                        I dati rappresentano i target minimi di validazione su SUMO necessari per procedere ai test sul campo.
+                        Media al ribasso nelle simulazioni SUMO.
                     </p>
                 </div>
             </section>
