@@ -217,5 +217,34 @@
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 14px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sl-logo {
+    font-size: 15px;
+    gap: 8px;
+    letter-spacing: 1px;
+  }
+
+  .sl-logo img.sl-logo-img {
+    height: 22px;
+  }
+
+  .sl-navbar.scrolled .sl-logo {
+    font-size: 14px;
+  }
+
+  .sl-navbar.scrolled img.sl-logo-img {
+    height: 20px;
+  }
+
+  .sl-container {
+    padding: 12px 4vw;
+  }
+
+  .sl-navbar.scrolled .sl-container {
+    padding: 8px 4vw;
   }
 }

@@ -61,6 +61,7 @@ html {
 	align-items: center;
 	width: 400px;
 	height: 400px;
+	max-width: 90vw;
 	background: #fff;
 	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
 	border-radius: 24px;
@@ -69,6 +70,8 @@ html {
 .smartlight-video-square {
 	width: 360px;
 	height: 360px;
+	max-width: calc(90vw - 40px);
+	max-height: calc(90vw - 40px);
 	object-fit: cover;
 	border-radius: 16px;
 	background: #000;
@@ -918,10 +921,20 @@ html {
 		min-height: 80vh;
 	}
 
+	/* Keep the main hero LEFT-aligned on mobile */
 	.smartlight-cover-container {
+		padding-bottom: 15vh;
+	}
+
+	/* Only center containers that have centered content */
+	.smartlight-cover:has(.smartlight-cover-content-centered) .smartlight-cover-container {
 		align-items: center;
 		text-align: center;
-		padding-bottom: 15vh;
+	}
+
+	.smartlight-cover-content {
+		align-items: flex-start;
+		text-align: left;
 	}
 
 	.smartlight-cover-title {
@@ -931,11 +944,39 @@ html {
 
 	.smartlight-cover-desc {
 		font-size: 0.9rem;
+		text-align: left;
 	}
 
 	.smartlight-cover-btn {
 		padding: 15px 40px;
 		width: 80%;
+	}
+
+	/* Centered content keeps center alignment */
+	.smartlight-cover-content-centered .smartlight-cover-desc {
+		text-align: center;
+	}
+
+	.smartlight-collab-title {
+		font-size: 2.2rem;
+		letter-spacing: 0;
+	}
+
+	.smartlight-collab-desc {
+		font-size: 1rem;
+		margin-bottom: 40px;
+	}
+
+	.smartlight-roadmap-section {
+		padding: 100px 0;
+	}
+
+	.smartlight-results-section {
+		padding: 100px 5vw;
+	}
+
+	.smartlight-collab-section {
+		padding: 100px 0;
 	}
 }
 
@@ -1161,6 +1202,156 @@ html {
 
 	.smartlight-section-subtitle {
 		font-size: 1.6rem;
+	}
+
+	.smartlight-video-wrapper {
+		width: 85vw;
+		height: 85vw;
+		border-radius: 18px;
+	}
+
+	.smartlight-video-square {
+		width: calc(85vw - 40px);
+		height: calc(85vw - 40px);
+	}
+
+	.smartlight-video-section {
+		padding: 40px 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.smartlight-cover-title {
+		font-size: 2rem;
+		letter-spacing: 0;
+	}
+
+	.smartlight-cover-desc {
+		font-size: 0.85rem;
+		margin-bottom: 28px;
+	}
+
+	.smartlight-cover-btn {
+		padding: 14px 20px;
+		width: 90%;
+		font-size: 0.8rem;
+	}
+
+	.smartlight-section-title {
+		font-size: 0.75rem;
+		letter-spacing: 2px;
+	}
+
+	.smartlight-section-subtitle {
+		font-size: 1.3rem;
+	}
+
+	.smartlight-section-header {
+		margin-bottom: 48px;
+	}
+
+	.smartlight-dual-column {
+		padding: 24px 20px;
+	}
+
+	.smartlight-dual-subtitle {
+		font-size: 1.3rem;
+		margin-bottom: 24px;
+	}
+
+	.smartlight-dual-list li {
+		font-size: 0.9rem;
+		margin-bottom: 20px;
+	}
+
+	.smartlight-dual-list li::before {
+		display: none;
+	}
+
+	.smartlight-dual-list li strong {
+		font-size: 0.95rem;
+	}
+
+	.smartlight-cover-container.combined-layout {
+		padding: 80px 4vw;
+	}
+
+	.smartlight-roadmap-label {
+		font-size: 1.15rem;
+	}
+
+	.smartlight-roadmap-text {
+		font-size: 0.9rem;
+	}
+
+	.smartlight-roadmap-container {
+		padding: 24px 4vw;
+	}
+
+	.smartlight-result-card {
+		padding: 40px 20px;
+	}
+
+	.smartlight-result-value {
+		font-size: 2.8rem;
+		letter-spacing: -1px;
+	}
+
+	.smartlight-result-label {
+		font-size: 0.7rem;
+	}
+
+	.smartlight-collab-title {
+		font-size: 1.8rem;
+	}
+
+	.smartlight-collab-desc {
+		font-size: 0.9rem;
+		margin-bottom: 32px;
+	}
+
+	.smartlight-collab-actions {
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.smartlight-collab-actions .smartlight-cover-btn {
+		width: 90%;
+	}
+
+	.smartlight-collab-section {
+		padding: 80px 0;
+	}
+
+	.smartlight-roadmap-section {
+		padding: 80px 0;
+	}
+
+	.smartlight-results-section {
+		padding: 80px 4vw;
+	}
+
+	.smartlight-results-disclaimer {
+		font-size: 0.7rem;
+		margin-top: 40px;
+	}
+
+	.smartlight-project-text h2 {
+		font-size: 1.5rem;
+	}
+
+	.smartlight-project-text p {
+		font-size: 1rem;
+	}
+
+	.smartlight-cover-content-centered .smartlight-cover-desc {
+		font-size: 1rem;
+	}
+
+	.smartlight-cover-divider {
+		width: 40px;
+		margin: 16px auto 24px auto;
 	}
 }
 

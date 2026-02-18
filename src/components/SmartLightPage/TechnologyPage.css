@@ -746,6 +746,10 @@
         letter-spacing: -1px;
     }
 
+    .tech-subtitle {
+        font-size: 1.05rem;
+    }
+
     .tech-arch-card {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -823,6 +827,18 @@
     .tech-arch-card.highlight::before {
         right: 20px;
     }
+
+    .tech-arch-grid {
+        gap: 50px;
+    }
+
+    .tech-reward-explanation>p {
+        font-size: 0.95rem;
+    }
+
+    .tech-stack-item {
+        padding-left: 25px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -830,9 +846,81 @@
         height: 70vh;
     }
 
+    .tech-title {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+        letter-spacing: -1px;
+    }
+
+    .tech-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
     .tech-badge {
-        font-size: 0.65rem;
-        padding: 6px 14px;
+        font-size: 0.6rem;
+        padding: 6px 12px;
+        letter-spacing: 2px;
+    }
+
+    .tech-section-title {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 40px;
+    }
+
+    .tech-overline {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+    }
+
+    .tech-intro-section {
+        padding: 80px 0 40px;
+    }
+
+    .tech-intro-desc {
+        font-size: 1rem;
+    }
+
+    .tech-arch-card {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .tech-card-content h3 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .tech-card-desc {
+        font-size: 0.9rem;
+    }
+
+    .tech-arch-number {
+        font-size: 2rem;
+    }
+
+    .tech-architecture {
+        padding: 30px 0 70px;
+    }
+
+    .tech-arch-grid {
+        gap: 35px;
+    }
+
+    .tech-continuous-section {
+        padding: 70px 0 60px;
+    }
+
+    .tech-cycle-card {
+        padding: 22px 18px;
+    }
+
+    .tech-cycle-title {
+        font-size: 1rem;
+    }
+
+    .tech-cycle-card p {
+        font-size: 0.88rem;
     }
 
     .tech-cycle-tag {
@@ -844,9 +932,79 @@
         padding: 3px 8px;
     }
 
+    .tech-reward-section {
+        padding: 70px 0;
+    }
+
+    .tech-reward-explanation>p {
+        font-size: 0.9rem;
+        margin-bottom: 28px;
+    }
+
+    .tech-formula-card {
+        padding: 24px 18px;
+    }
+
+    .tech-formula-code {
+        font-size: 0.85rem;
+    }
+
     .reward-indicator {
         width: 32px;
         height: 32px;
         font-size: 1rem;
+    }
+
+    .tech-reward-item h5 {
+        font-size: 0.7rem;
+    }
+
+    .tech-reward-item p {
+        font-size: 0.85rem;
+    }
+
+    .tech-stack-section {
+        padding: 70px 0;
+    }
+
+    .tech-stack-item {
+        padding-left: 20px;
+    }
+
+    .tech-stack-content h5 {
+        font-size: 1.1rem;
+    }
+
+    .tech-stack-content p {
+        font-size: 0.9rem;
+    }
+
+    .tech-flow-diagram {
+        padding: 70px 0;
+    }
+
+    .step-box {
+        padding: 22px 24px;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .step-desc {
+        font-size: 0.82rem;
+        padding: 0 10px;
+    }
+
+    .tech-container {
+        padding: 0 16px;
+    }
+
+    .tech-continuous-header {
+        margin: 0 auto 50px;
+    }
+
+    .tech-arch-card.highlight::before {
+        font-size: 0.55rem;
+        padding: 3px 10px;
+        right: 15px;
     }
 }

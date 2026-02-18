@@ -436,4 +436,199 @@
     .business-plan-page .smartlight-cover-btn {
         width: 100%;
     }
+
+    .bp-legal-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .bp-hero {
+        padding: 140px 0 70px;
+    }
+
+    .bp-content {
+        padding: 60px 0;
+    }
+
+    .bp-roadmap-section {
+        padding: 80px 0;
+    }
+
+    .bp-results-section {
+        padding: 80px 0;
+    }
+
+    .bp-legal-section {
+        padding: 80px 0;
+    }
+
+    .bp-section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .business-plan-page .smartlight-collab-section {
+        padding: 100px 0;
+    }
+
+    .bp-phase-card {
+        padding: 40px 30px;
+    }
+
+    .bp-phase-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bp-title {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .bp-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    .bp-hero {
+        padding: 120px 0 50px;
+    }
+
+    .bp-phase-card {
+        padding: 30px 20px;
+    }
+
+    .bp-phase-card h2 {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .bp-phase-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+    }
+
+    .bp-phase-card p {
+        font-size: 0.88rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .bp-phase-num {
+        font-size: 2rem;
+        top: 18px;
+        right: 20px;
+    }
+
+    .bp-phase-metrics {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .bp-phase-metrics span {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+
+    .bp-section-title {
+        font-size: 1.5rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 30px;
+    }
+
+    .bp-roadmap-timeline {
+        padding-left: 28px;
+    }
+
+    .bp-item-dot {
+        left: -34px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .bp-roadmap-item {
+        margin-bottom: 40px;
+    }
+
+    .bp-item-content h4 {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .bp-item-content p {
+        font-size: 0.95rem;
+    }
+
+    .bp-result-value {
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+    }
+
+    .bp-result-label {
+        font-size: 0.65rem;
+    }
+
+    .bp-results-disclaimer {
+        font-size: 0.75rem;
+    }
+
+    .bp-legal-card {
+        padding: 24px 18px;
+    }
+
+    .bp-legal-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .bp-legal-card p {
+        font-size: 0.85rem;
+    }
+
+    .bp-content {
+        padding: 40px 0;
+    }
+
+    .bp-roadmap-section {
+        padding: 50px 0;
+    }
+
+    .bp-results-section {
+        padding: 50px 0;
+    }
+
+    .bp-legal-section {
+        padding: 50px 0;
+    }
+
+    .bp-cta {
+        padding: 50px 0 80px;
+    }
+
+    .business-plan-page .smartlight-collab-title {
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+    }
+
+    .business-plan-page .smartlight-collab-desc {
+        font-size: 0.9rem;
+        margin-bottom: 32px;
+    }
+
+    .business-plan-page .smartlight-collab-section {
+        padding: 70px 0;
+    }
+
+    .business-plan-page .smartlight-cover-btn {
+        padding: 14px 20px;
+        font-size: 0.8rem;
+    }
+
+    .bp-strategy-grid {
+        gap: 16px;
+    }
+
+    .bp-results-grid {
+        gap: 20px;
+    }
 }

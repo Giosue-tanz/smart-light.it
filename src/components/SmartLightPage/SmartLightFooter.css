@@ -33,3 +33,14 @@
         gap: 6px
     }
 }
+
+@media (max-width: 480px) {
+    .sl-footer-inner {
+        font-size: 12px;
+        padding: 0 16px;
+    }
+
+    .sl-footer {
+        padding: 24px 0;
+    }
+}
