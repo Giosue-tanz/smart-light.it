@@ -36,7 +36,7 @@ const BusinessPlanPage = () => {
             <section className="bp-hero">
                 <div className="bp-container">
                     <h1 className="bp-title">BUSINESS MODEL</h1>
-                    <p className="bp-subtitle">Crediti di Carbonio: Monetizzare la riduzione delle emissioni urbane</p>
+                    <p className="bp-subtitle">Smart City Infrastructure: SaaS, Manutenzione e Data Monetization</p>
                 </div>
             </section>
 
@@ -62,7 +62,7 @@ const BusinessPlanPage = () => {
                             <p>Una volta confermati i benefici di tempo e CO₂, abilitiamo il controllo attivo dei cicli semaforici tramite l'intelligenza centrale. Sfruttiamo l'hardware già installato, trasformandolo in un sistema adattivo in tempo reale senza ulteriori costi infrastrutturali.</p>
                             <div className="bp-phase-metrics">
                                 <span>Proven Results</span>
-                                <span>Carbon Credits</span>
+                                <span>Smart Control</span>
                             </div>
                         </div>
 
@@ -108,51 +108,11 @@ const BusinessPlanPage = () => {
                 </div>
             </section>
 
-            {/* CARBON CREDITS - ORA DOPO */}
-            <section className="bp-carbon-section">
-                <div className="bp-container">
-                    <h2 className="bp-section-title">CREDITI DI CARBONIO</h2>
-                    <p className="bp-carbon-intro">
-                        Ogni incrocio ottimizzato da SmartLight riduce mediamente <strong>~87 tCO₂/anno</strong> (stima cautelativa al 13%, al netto del sim-to-real gap).
-                        Queste riduzioni certificate generano crediti vendibili sul mercato regolamentato (EU&nbsp;ETS) e volontario (Verra&nbsp;VCS&nbsp;/&nbsp;Gold&nbsp;Standard).
-                    </p>
-                    <div className="bp-carbon-grid">
-                        <div className="bp-carbon-card">
-                            <div className="bp-carbon-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                            <h4>EU ETS — MERCATO REGOLAMENTATO</h4>
-                            <span className="bp-carbon-price">~€74/tCO₂</span>
-                            <p className="bp-carbon-source">Prezzo attuale (Feb 2026). Previsione 2027: €95–110/t.</p>
-                            <span className="bp-carbon-revenue">≈ €6.438/anno per incrocio</span>
-                        </div>
-                        <div className="bp-carbon-card">
-                            <div className="bp-carbon-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" />
-                                    <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                            <h4>MERCATO VOLONTARIO — ALTA QUALITÀ</h4>
-                            <span className="bp-carbon-price">~€30/tCO₂</span>
-                            <p className="bp-carbon-source">Crediti BBB+ certificati Verra VCS / Gold Standard.</p>
-                            <span className="bp-carbon-revenue">≈ €2.610/anno per incrocio</span>
-                        </div>
-                    </div>
-                    <p className="bp-carbon-footnote">
-                        Fonti: Trading Economics, ING Research, Ecosystem Marketplace, Sylvera (2025/2026). Calcolo basato su ~15.000 veicoli/giorno, riduzione CO₂ del 20% (stima fortemente conservativa, simulazioni SUMO), modello HBEFA v4.2.
-                    </p>
-                </div>
-            </section>
 
             {/* LEGAL */}
             <section className="bp-legal-section">
                 <div className="bp-container">
-                    <h2 className="bp-section-title">SOSTENIBILITÀ LEGALE & CERTIFICAZIONI</h2>
+                    <h2 className="bp-section-title">SOSTENIBILITÀ LEGALE & DATA PRIVACY</h2>
                     <div className="bp-legal-content">
                         <div className="bp-legal-card">
                             <h4>AFFIDAMENTO DIRETTO</h4>
@@ -163,12 +123,12 @@ const BusinessPlanPage = () => {
                             <p>Ogni installazione contribuisce ai KPI di sostenibilità ambientale del Comune, facilitando l'accesso a fondi europei e al <strong>Green Deal europeo</strong>.</p>
                         </div>
                         <div className="bp-legal-card">
-                            <h4>CERTIFICAZIONE VERRA / GOLD STANDARD</h4>
-                            <p>Le riduzioni di CO₂ sono misurate con protocollo <strong>MRV</strong> (Monitoring, Reporting, Verification) per generare crediti vendibili sui mercati certificati.</p>
+                            <h4>DATA MONETIZATION</h4>
+                            <p>I flussi di traffico anonimizzati e aggregati vengono valorizzati tramite vendita a terzi (logistica, retail, mappe), trasformando l'infrastruttura in un asset informativo.</p>
                         </div>
                         <div className="bp-legal-card">
-                            <h4>CARBON BORDER ADJUSTMENT (CBAM)</h4>
-                            <p>Il nuovo regolamento CBAM dell'UE (operativo dal 2026) amplifica la domanda di crediti di carbonio e il valore delle riduzioni certificate.</p>
+                            <h4>GDPR COMPLIANCE</h4>
+                            <p>L'elaborazione Edge garantisce che nessun dato sensibile lasci l'infrastruttura locale, assicurando la massima protezione della privacy urbana.</p>
                         </div>
                     </div>
                 </div>
@@ -183,35 +143,35 @@ const BusinessPlanPage = () => {
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
                                 <h4>SET 2025 — VINCITA BANDO CONCORSO IDEE</h4>
-                                <p>SmartLight vince il bando "Concorso Idee" universitario, validando il concept e ottenendo il primo riconoscimento istituzionale del progetto.</p>
+                                <p>SmartLight vince il bando "Concorso Idee" universitario, ottenendo il primo riconoscimento istituzionale e validando il concept del progetto.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item completed">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
                                 <h4>OTT 2025 – FEB 2026 — EVOLUZIONE AI</h4>
-                                <p>Sviluppo dell'AI con Deep Reinforcement Learning (PPO/DQN). Integrazione con SUMO per simulazioni fisiche realistiche. Validazione su topologia reale della città di Pisa.</p>
+                                <p>Sviluppo AI con Deep Reinforcement Learning (PPO/DQN). Integrazione con SUMO per simulazioni fisiche su topologia reale di Pisa.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item active">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
                                 <h4>H1 2026 — TEST & DASHBOARD</h4>
-                                <p>Test pilota su primo incrocio reale. Sviluppo dashboard di monitoraggio per la PA. Raccolta dati baseline per certificazione crediti CO₂.</p>
+                                <p>Test pilota su primo incrocio reale. Sviluppo dashboard di monitoraggio per la PA. Validazione tecnica dell'hardware in campo.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
-                                <h4>H2 2026 — IMPLEMENTAZIONE & VALIDAZIONE</h4>
-                                <p>Implementazione operativa nell'incrocio pilota. Pubblicazione risultati. Avvio certificazione Verra VCS / Gold Standard. Primo accordo con ente locale.</p>
+                                <h4>H2 2026 — IMPLEMENTAZIONE OPERATIVA</h4>
+                                <p>Implementazione operativa negli incroci. Pubblicazione risultati. Avvio data monetization layer e primo accordo locale.</p>
                             </div>
                         </div>
                         <div className="bp-roadmap-item">
                             <div className="bp-item-dot"></div>
                             <div className="bp-item-content">
                                 <h4>METÀ 2027 IN POI — ESPANSIONE & SCALING</h4>
-                                <p>Deploy multi-città e consolidamento della rete nazionale ed europea. I ricavi da crediti di carbonio certificati diventano il driver principale della crescita sostenibile.</p>
+                                <p>Deploy multi-città e consolidamento della rete nazionale ed europea. I ricavi da SaaS e flussi dati diventano il driver principale della crescita sostenibile.</p>
                             </div>
                         </div>
                     </div>
@@ -230,31 +190,29 @@ const BusinessPlanPage = () => {
                         <div className="bp-funding-chart-wrapper">
                             <div className="bp-pie-container">
                                 <svg viewBox="0 0 100 100" className="bp-pie-chart">
-                                    {/* Sfondo nero per evitare gap bianchi traslucidi */}
                                     <circle r="25" cx="50" cy="50" fill="none" stroke="#000000" strokeWidth="50" />
 
-                                    {/* Hardware: 48% (Leggermente aumentato per overlap) */}
+                                    {/* Hardware: 48% */}
                                     <circle r="25" cx="50" cy="50" className="pie-segment hardware"
-                                        strokeDasharray="48.5 100" strokeDashoffset="0" pathLength="100"
+                                        strokeDasharray="48 100" strokeDashoffset="0" pathLength="100"
                                         onMouseEnter={() => setHoveredSlice({ percent: '48%', label: 'HARDWARE' })}
                                         onMouseLeave={() => setHoveredSlice({ percent: '100%', label: 'TOTALE' })}
                                     />
 
-                                    {/* Installazione: 27% (Inizio anticipato a -48 per overlap netto) */}
+                                    {/* Installazione: 25.5% */}
                                     <circle r="25" cx="50" cy="50" className="pie-segment installation"
-                                        strokeDasharray="27.5 100" strokeDashoffset="-48" pathLength="100"
-                                        onMouseEnter={() => setHoveredSlice({ percent: '27%', label: 'INSTALL.' })}
+                                        strokeDasharray="25.5 100" strokeDashoffset="-48" pathLength="100"
+                                        onMouseEnter={() => setHoveredSlice({ percent: '25%', label: 'INSTALL.' })}
                                         onMouseLeave={() => setHoveredSlice({ percent: '100%', label: 'TOTALE' })}
                                     />
 
-                                    {/* AI: 25% (Inizio anticipato a -75 per overlap netto) */}
+                                    {/* AI Setup: 26.5% */}
                                     <circle r="25" cx="50" cy="50" className="pie-segment ai"
-                                        strokeDasharray="25.5 100" strokeDashoffset="-75" pathLength="100"
-                                        onMouseEnter={() => setHoveredSlice({ percent: '25%', label: 'AI SETUP' })}
+                                        strokeDasharray="26.5 100" strokeDashoffset="-73.5" pathLength="100"
+                                        onMouseEnter={() => setHoveredSlice({ percent: '26%', label: 'AI SETUP' })}
                                         onMouseLeave={() => setHoveredSlice({ percent: '100%', label: 'TOTALE' })}
                                     />
 
-                                    {/* Foro centrale con dati dinamici */}
                                     <circle r="22" cx="50" cy="50" fill="#ffffff" />
                                     <text x="50" y="48" textAnchor="middle" className="pie-percent-val">{hoveredSlice.percent}</text>
                                     <text x="50" y="58" textAnchor="middle" className="pie-label-val">{hoveredSlice.label}</text>
@@ -280,22 +238,22 @@ const BusinessPlanPage = () => {
                                     <tbody>
                                         <tr className="cost-row">
                                             <td><strong>Hardware</strong></td>
-                                            <td>NVIDIA Jetson, Telecamere IP, Box stagno/PoE/Router 5G</td>
-                                            <td className="cost-val">€ 1.000 - 2.500</td>
+                                            <td>NVIDIA Jetson, Telecamere IP, box stagni, router 5G</td>
+                                            <td className="cost-val">€ 5.000</td>
                                         </tr>
                                         <tr className="cost-row">
                                             <td><strong>Installazione</strong></td>
                                             <td>Squadra tecnica, noleggio cestello, materiale vario</td>
-                                            <td className="cost-val">€ 900 - 1.300</td>
+                                            <td className="cost-val">€ 2.600</td>
                                         </tr>
                                         <tr className="cost-row">
-                                            <td><strong>Setup AI</strong></td>
+                                            <td><strong>Setup AI & Data</strong></td>
                                             <td>Mappatura ROI, fine-tuning, test e validazione</td>
-                                            <td className="cost-val">€ 500 - 1.500</td>
+                                            <td className="cost-val">€ 3.000</td>
                                         </tr>
                                         <tr className="total-row-new">
-                                            <td colSpan="2"><strong>TOTALE PER INCROCIO</strong></td>
-                                            <td className="cost-val"><strong>€ 2.400 - 5.300</strong></td>
+                                            <td colSpan="2"><strong>TOTALE FASE PILOTA (2 INCROCI)</strong></td>
+                                            <td className="cost-val"><strong>€ 10.600</strong></td>
                                         </tr>
                                     </tbody>
                                 </table>

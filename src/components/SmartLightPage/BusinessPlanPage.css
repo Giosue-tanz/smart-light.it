@@ -467,6 +467,14 @@
     stroke: #b0b0b0;
 }
 
+.pie-segment.certification {
+    stroke: #cccccc;
+}
+
+.pie-segment.certification:hover {
+    stroke: #e0e0e0;
+}
+
 .pie-percent-val {
     font-size: 10px;
     font-weight: 900;
@@ -518,6 +526,10 @@
 
 .dot.ai {
     background: #999999;
+}
+
+.dot.certification {
+    background: #cccccc;
 }
 
 .bp-cost-table-wrapper {
