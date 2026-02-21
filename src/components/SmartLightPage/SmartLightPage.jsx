@@ -117,7 +117,7 @@ export default function SmartLightPage() {
                     <div className="smartlight-cover-content">
                         <h1 className="smartlight-cover-title">SMART LIGHT</h1>
                         <p className="smartlight-cover-desc">
-                            Un sistema intelligente per ottimizzare la mobilità urbana, ridurre le emissioni e migliorare la sicurezza stradale. Aggiornamento della tua rete urbana è qui.
+                            L'evoluzione della gestione urbana inizia qui. Trasformiamo l'infrastruttura passiva in una rete neurale adattiva, capace di rispondere alle esigenze della città in tempo reale.
                         </p>
                         <button className="smartlight-cover-btn btn-down" onClick={() => handleArrowClick('#smartlight-combined-cover', 0)}>
                             MORE
