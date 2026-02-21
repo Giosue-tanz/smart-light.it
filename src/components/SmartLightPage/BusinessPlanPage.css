@@ -51,6 +51,9 @@
     padding: 60px 40px;
     border-radius: 8px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -584,6 +587,15 @@
 /* FUNDING OPTIONS */
 .bp-funding-options {
     margin-top: 100px;
+}
+
+.bp-funding-disclaimer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.45);
+    font-style: italic;
+    letter-spacing: 0.5px;
 }
 
 .bp-funding-options-grid {

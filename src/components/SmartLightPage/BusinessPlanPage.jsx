@@ -340,6 +340,11 @@ const BusinessPlanPage = () => {
                                 <p className="option-desc">Velocità di esecuzione e accesso a network strategici nazionali ed internazionali di CleanTech.</p>
                             </div>
                         </div>
+
+                        <p className="bp-funding-disclaimer">
+                            queste cifre non comprendono i costi delle certificazioni.
+                        </p>
+
                         <div className="bp-invest-cta">
                             <h3 className="bp-invest-title" onClick={() => document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })}>
                                 VUOI INVESTIRE, DONARE O COLLABORARE CON NOI?
