@@ -71,6 +71,8 @@ Il modello prevede una crescita organica basata sull'acquisizione progressiva di
 | **EBITDA** | **🟢 +€ 400** | **🟢 +€ 67.600** | **🟢 +€ 228.600** | **🟢 +€ 561.600** | **🟢 +€ 1.116.600** |
 | **EBITDA Margin %** | **1.5%** | **45.6%** | **56.3%** | **60.6%** | **62.8%** |
 
+> **Nota di Conservatività:** Le proiezioni sopra riportate **escludono interamente** i potenziali ricavi dai Crediti di Carbonio e i relativi costi di certificazione. Questo garantisce che il business sia profittevole e sostenibile anche in assenza di tali asset.
+
 > **¹ SaaS & Maintenance:** Calcolato su una base media di € 300/mese per incrocio attivo.
 
 ### 4.2 Analisi del Fabbisogno Finanziario
@@ -94,6 +96,14 @@ L'azienda raggiunge il **Break-even Point operativo già nell'Anno 2**, grazie a
 
 - **Autosostenibilità:** Grazie al modello "CapEx Coperto", ogni nuova installazione finanzia parzialmente l'espansione della rete.
 - **Scalabilità:** Oltre i 100 incroci (Anno 4), l'EBITDA Margin supera il 60%, dimostrando l'efficienza del modello basato su Edge AI che abbatte i costi di banda e storage cloud centralizzato.
+
+### 4.5 Strategia di Gestione Incognite e Certificazioni
+
+La sostenibilità del modello SmartLight è garantita dalla separazione tra l'operatività core e le attività ad alto contenuto d'incertezza:
+
+1. **Priorizzazione del Cash-Flow (Core Business):** Il modello finanziario si regge esclusivamente su installazioni e canoni SaaS. Questi flussi sono certi e basati su contratti di servizio standard, coprendo interamente i costi operativi (OpEx).
+2. **Posticipazione delle Certificazioni Ambientali:** I costi di certificazione (Carbon Credits) non vengono affrontati nella fase di bootstrap. L'iter viene pianificato solo come "Upside" per le versioni future della roadmap, una volta raggiunta una massa critica di incroci che possa giustificare l'investimento.
+3. **De-risking del Modello:** Se i costi di certificazione dovessero rivelarsi superiori alla redditività attesa, l'azienda mantiene la sua profittabilità scalando esclusivamente il modello SaaS/Data Monetization (SaaS-First Strategy).
 
 ---
 
