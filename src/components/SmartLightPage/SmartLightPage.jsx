@@ -176,38 +176,8 @@ export default function SmartLightPage() {
                 </div>
             </section>
 
-            {/* Quinta Cover - Business Model */}
-            <section id="smartlight-business-model" className="smartlight-cover observe-animate" style={{ '--animate-delay': '210ms' }}>
-                <video
-                    src={BusinessModelVideo}
-                    className={`smartlight-cover-video-bg ${businessModelLoaded ? 'loaded' : 'loading'}`}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster={BiciBg}
-                    onLoadedData={() => setBusinessModelLoaded(true)}
-                />
-                <div className="smartlight-cover-overlay" style={{ background: 'rgba(0, 0, 0, 0.6)' }}></div>
-                <div className="smartlight-cover-container">
-                    <div className="smartlight-cover-content-centered">
-                        <h1 className="smartlight-cover-title">BUSINESS MODEL</h1>
-                        <div className="smartlight-cover-divider" style={{ background: '#fff' }}></div>
-                        <p className="smartlight-cover-desc">
-                            SmartLight introduce il modello <strong>Safety as a Service (SaaS)</strong> per la mobilità urbana. Attraverso la <strong>monetizzazione dei flussi informativi</strong> e l'ottimizzazione neurale dei flussi, offriamo una soluzione con <strong>ROI accelerato</strong> e governance data-driven per le amministrazioni pubbliche.
-                        </p>
-                        <button className="smartlight-cover-btn btn-right" onClick={() => navigate('/business-plan')} style={{ marginTop: '40px' }}>
-                            ESPLORA
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
             {/* Quarta Cover - Tecnologia */}
-            <section id="smartlight-how-it-works-cover" className="smartlight-cover observe-animate tech-section" style={{ '--animate-delay': '230ms' }}>
+            <section id="smartlight-how-it-works-cover" className="smartlight-cover observe-animate tech-section" style={{ '--animate-delay': '210ms' }}>
                 <img
                     src={Topografia}
                     alt=""
@@ -242,6 +212,36 @@ export default function SmartLightPage() {
                             className="smartlight-cover-btn tech-btn-premium-solid"
                             onClick={() => navigate('/technology')}
                         >
+                            ESPLORA
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Quinta Cover - Business Model */}
+            <section id="smartlight-business-model" className="smartlight-cover observe-animate" style={{ '--animate-delay': '230ms' }}>
+                <video
+                    src={BusinessModelVideo}
+                    className={`smartlight-cover-video-bg ${businessModelLoaded ? 'loaded' : 'loading'}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={BiciBg}
+                    onLoadedData={() => setBusinessModelLoaded(true)}
+                />
+                <div className="smartlight-cover-overlay" style={{ background: 'rgba(0, 0, 0, 0.6)' }}></div>
+                <div className="smartlight-cover-container">
+                    <div className="smartlight-cover-content-centered">
+                        <h1 className="smartlight-cover-title">BUSINESS MODEL</h1>
+                        <div className="smartlight-cover-divider" style={{ background: '#fff' }}></div>
+                        <p className="smartlight-cover-desc">
+                            SmartLight introduce il modello <strong>Safety as a Service (SaaS)</strong> per la mobilità urbana. Attraverso la <strong>monetizzazione dei flussi informativi</strong> e l'ottimizzazione neurale dei flussi, offriamo una soluzione con <strong>ROI accelerato</strong> e governance data-driven per le amministrazioni pubbliche.
+                        </p>
+                        <button className="smartlight-cover-btn btn-right" onClick={() => navigate('/business-plan')} style={{ marginTop: '40px' }}>
                             ESPLORA
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

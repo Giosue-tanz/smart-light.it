@@ -88,8 +88,8 @@ const SmartLightNavbar = () => {
 
         <nav className="sl-nav">
           <a href="#smartlight-combined-cover" className="sl-nav-link" onClick={handleNavClick('smartlight-combined-cover')}>Obiettivo</a>
-          <a href="#smartlight-business-model" className="sl-nav-link" onClick={handleNavClick('smartlight-business-model')}>Business</a>
           <a href="#smartlight-how-it-works-cover" className="sl-nav-link" onClick={handleNavClick('smartlight-how-it-works-cover')}>Tecnologia</a>
+          <a href="#smartlight-business-model" className="sl-nav-link" onClick={handleNavClick('smartlight-business-model')}>Business</a>
           <a href="#smartlight-collab" className="sl-nav-link" onClick={handleNavClick('smartlight-collab')}>Contatti</a>
         </nav>
       </div>
