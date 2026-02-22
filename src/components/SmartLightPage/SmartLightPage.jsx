@@ -165,11 +165,11 @@ export default function SmartLightPage() {
                         </div>
                         <div className="smartlight-dual-column">
                             <h2 className="smartlight-dual-title">THE OPPORTUNITY</h2>
-                            <h3 className="smartlight-dual-subtitle">Flussi & Monetizzazione Green</h3>
+                            <h3 className="smartlight-dual-subtitle">FLUSSI & MONETIZZAZIONE GREEN</h3>
                             <ul className="smartlight-dual-list">
-                                <li><strong>Asset Ambientali</strong> Trasformiamo il risparmio di CO2 in Crediti di Carbonio monetizzabili.</li>
-                                <li><strong>Upgrade</strong> Aumentiamo la capacità via software su hardware esistente con ROI (Return on Investment) immediato.</li>
-                                <li><strong>Compliance ESG</strong> KPI (Key Performance Indicators) granulari per l'accesso a fondi "Green" e obiettivi di sostenibilità certi.</li>
+                                <li><strong>DATA ASSET</strong> Trasformiamo ogni incrocio in un nodo di gestione dati (anonimi) ad alto valore per logistica, retail e urbanisti.</li>
+                                <li><strong>UPGRADE</strong> Aumentiamo la capacità stradale via software su hardware esistente con ROI (Return on Investment) immediato.</li>
+                                <li><strong>COMPLIANCE ESG</strong> KPI (Key Performance Indications) granulari per l'accesso a fondi «Green» e obiettivi di sostenibilità.</li>
                             </ul>
                         </div>
                     </div>
@@ -194,7 +194,7 @@ export default function SmartLightPage() {
                         <h1 className="smartlight-cover-title">BUSINESS MODEL</h1>
                         <div className="smartlight-cover-divider" style={{ background: '#fff' }}></div>
                         <p className="smartlight-cover-desc">
-                            SmartLight introduce il modello <strong>Safety as a Service (SaaS)</strong> per la mobilità urbana. Attraverso la monetizzazione dei <strong>Carbon Credits</strong> generati dalla riduzione delle emissioni e l'ottimizzazione dei costi energetici, offriamo una soluzione con <strong>ROI accelerato</strong> e scalabilità modulare per le amministrazioni pubbliche.
+                            SmartLight introduce il modello <strong>Safety as a Service (SaaS)</strong> per la mobilità urbana. Attraverso la <strong>monetizzazione dei flussi informativi</strong> e l'ottimizzazione neurale dei flussi, offriamo una soluzione con <strong>ROI accelerato</strong> e governance data-driven per le amministrazioni pubbliche.
                         </p>
                         <button className="smartlight-cover-btn btn-right" onClick={() => navigate('/business-plan')} style={{ marginTop: '40px' }}>
                             ESPLORA
