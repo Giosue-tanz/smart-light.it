@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 const SmartLightPage = React.lazy(() => import('./components/SmartLightPage/SmartLightPage'));
 const BusinessPlanPage = React.lazy(() => import('./components/SmartLightPage/BusinessPlanPage'));
@@ -15,7 +15,7 @@ const LoadingFallback = () => (
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <Router>
       <div className="App">
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
@@ -27,7 +27,7 @@ function App() {
           </Routes>
         </Suspense>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
