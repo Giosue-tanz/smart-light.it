@@ -463,14 +463,13 @@ const TechnologyPage = () => {
             ═══════════════════════════════════════════ */}
             <section className="smartlight-collab-section">
                 <video
+                    src={CollabVideo}
                     className="smartlight-collab-video"
                     autoPlay
                     loop
                     muted
                     playsInline
-                >
-                    <source src={CollabVideo} type="video/mp4" />
-                </video>
+                />
                 <div className="smartlight-collab-overlay"></div>
 
                 <div className="smartlight-collab-container">
