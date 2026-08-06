@@ -57,6 +57,7 @@ const ContactPage = () => {
             <section className="contact-hero">
                 <video
                     src={ContactVideo}
+                    onLoadedData={(e) => e.target.classList.add('loaded')}
                     autoPlay
                     loop
                     muted

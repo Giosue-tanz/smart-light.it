@@ -1135,6 +1135,12 @@ html {
 	filter: brightness(0.4) blur(4px);
 	transform: scale(1.1);
 	/* To hide blur edges */
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.smartlight-collab-video.loaded {
+	opacity: 1;
 }
 
 .smartlight-collab-overlay {

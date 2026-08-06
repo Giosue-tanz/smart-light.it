@@ -30,6 +30,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.contact-hero-video.loaded {
     opacity: 0.6;
 }
 

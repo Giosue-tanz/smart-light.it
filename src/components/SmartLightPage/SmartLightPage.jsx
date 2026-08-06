@@ -65,7 +65,7 @@ export default function SmartLightPage() {
             };
             createPreload(Topografia, 'image');
             createPreload(BiciBg, 'image');
-            createPreload(CarpisaVideo, 'video');
+            // Removed CarpisaVideo preload to save bandwidth
         } catch (e) {
             // ignore
         }
@@ -100,7 +100,8 @@ export default function SmartLightPage() {
             <section id="smartlight-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '0ms' }}>
                 <video
                     src={CoverVideo}
-                    className="smartlight-cover-video-bg loaded"
+                    className="smartlight-cover-video-bg"
+                    onLoadedData={(e) => e.target.classList.add('loaded')}
                     autoPlay
                     loop
                     muted
@@ -128,7 +129,8 @@ export default function SmartLightPage() {
             <section id="smartlight-combined-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '150ms' }}>
                 <video
                     src={ProblemCoverVideo}
-                    className="smartlight-cover-video-bg loaded"
+                    className="smartlight-cover-video-bg"
+                    onLoadedData={(e) => e.target.classList.add('loaded')}
                     autoPlay
                     loop
                     muted
@@ -175,7 +177,8 @@ export default function SmartLightPage() {
                 <img
                     src={Topografia}
                     alt=""
-                    className="smartlight-cover-video-bg loaded"
+                    className="smartlight-cover-video-bg"
+                    onLoad={(e) => e.target.classList.add('loaded')}
                     style={{ objectFit: 'cover' }}
                 />
                 <div className="smartlight-cover-container combined-layout">
@@ -219,7 +222,8 @@ export default function SmartLightPage() {
             <section id="smartlight-business-model" className="smartlight-cover observe-animate" style={{ '--animate-delay': '230ms' }}>
                 <video
                     src={BusinessModelVideo}
-                    className="smartlight-cover-video-bg loaded"
+                    className="smartlight-cover-video-bg"
+                    onLoadedData={(e) => e.target.classList.add('loaded')}
                     autoPlay
                     loop
                     muted
@@ -249,6 +253,7 @@ export default function SmartLightPage() {
                 <video
                     src={CollabVideo}
                     className="smartlight-collab-video"
+                    onLoadedData={(e) => e.target.classList.add('loaded')}
                     autoPlay
                     loop
                     muted

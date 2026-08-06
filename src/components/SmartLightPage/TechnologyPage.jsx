@@ -465,6 +465,7 @@ const TechnologyPage = () => {
                 <video
                     src={CollabVideo}
                     className="smartlight-collab-video"
+                    onLoadedData={(e) => e.target.classList.add('loaded')}
                     autoPlay
                     loop
                     muted
