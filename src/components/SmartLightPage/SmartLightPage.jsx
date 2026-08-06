@@ -29,11 +29,7 @@ export default function SmartLightPage() {
         }
     };
 
-    const [biciLoaded, setBiciLoaded] = useState(false);
-    const [coverLoaded, setCoverLoaded] = useState(false);
-    const [problemCoverLoaded, setProblemCoverLoaded] = useState(false);
-    const [howItWorksLoaded, setHowItWorksLoaded] = useState(false);
-    const [businessModelLoaded, setBusinessModelLoaded] = useState(false);
+
 
     // Scarica il PDF Smartlight.pdf dalla cartella assets
     const handleDownloadPdf = () => {
@@ -104,13 +100,12 @@ export default function SmartLightPage() {
             <section id="smartlight-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '0ms' }}>
                 <video
                     src={CoverVideo}
-                    className={`smartlight-cover-video-bg ${coverLoaded ? 'loaded' : 'loading'}`}
+                    className="smartlight-cover-video-bg loaded"
                     autoPlay
                     loop
                     muted
                     playsInline
                     poster={Topografia}
-                    onLoadedData={() => setCoverLoaded(true)}
                 />
                 <div className="smartlight-cover-overlay"></div>
                 <div className="smartlight-cover-container">
@@ -133,13 +128,12 @@ export default function SmartLightPage() {
             <section id="smartlight-combined-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '150ms' }}>
                 <video
                     src={ProblemCoverVideo}
-                    className={`smartlight-cover-video-bg ${problemCoverLoaded ? 'loaded' : 'loading'}`}
+                    className="smartlight-cover-video-bg loaded"
                     autoPlay
                     loop
                     muted
                     playsInline
                     poster={BiciBg}
-                    onLoadedData={() => setProblemCoverLoaded(true)}
                 />
                 <div className="smartlight-cover-overlay" style={{ background: 'rgba(10, 10, 10, 0.65)' }}></div>
                 <div className="smartlight-cover-container combined-layout">
@@ -225,13 +219,12 @@ export default function SmartLightPage() {
             <section id="smartlight-business-model" className="smartlight-cover observe-animate" style={{ '--animate-delay': '230ms' }}>
                 <video
                     src={BusinessModelVideo}
-                    className={`smartlight-cover-video-bg ${businessModelLoaded ? 'loaded' : 'loading'}`}
+                    className="smartlight-cover-video-bg loaded"
                     autoPlay
                     loop
                     muted
                     playsInline
                     poster={BiciBg}
-                    onLoadedData={() => setBusinessModelLoaded(true)}
                 />
                 <div className="smartlight-cover-overlay" style={{ background: 'rgba(0, 0, 0, 0.6)' }}></div>
                 <div className="smartlight-cover-container">
