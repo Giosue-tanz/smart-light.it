@@ -2,18 +2,18 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SmartLightPage.css';
 
-const BiciBg = import.meta.env.BASE_URL + 'bici1.jpg';
-const CarpisaVideo = import.meta.env.BASE_URL + 'carpisa.mp4';
-const Topografia = import.meta.env.BASE_URL + 'tech2.png';
-const SmartPdf = import.meta.env.BASE_URL + 'Smartlight.pdf';
-const CoverVideo = import.meta.env.BASE_URL + 'VideoC6.mp4';
-const TechImg = import.meta.env.BASE_URL + 'tech.png';
+import BiciBg from '../../assets/bici1.jpg';
+import CarpisaVideo from '../../assets/carpisa.mp4';
+import Topografia from '../../assets/tech2.png';
+import SmartPdf from '../../assets/Smartlight.pdf';
+import CoverVideo from '../../assets/VideoC6.mp4';
+import TechImg from '../../assets/tech.png';
 import SmartLightNavbar from './SmartLightNavbar';
 import SmartLightFooter from './SmartLightFooter';
-const ProblemCoverVideo = import.meta.env.BASE_URL + 'VideoC3.mp4';
-const HowItWorksVideo = import.meta.env.BASE_URL + 'VideoC6.mp4';
-const BusinessModelVideo = import.meta.env.BASE_URL + 'VideoC5.mp4';
-const CollabVideo = import.meta.env.BASE_URL + 'VideoCC.mp4';
+import ProblemCoverVideo from '../../assets/VideoC3.mp4';
+import HowItWorksVideo from '../../assets/VideoC6.mp4';
+import BusinessModelVideo from '../../assets/VideoC5.mp4';
+import CollabVideo from '../../assets/VideoCC.mp4';
 
 export default function SmartLightPage() {
     const navigate = useNavigate();

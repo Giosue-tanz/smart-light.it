@@ -4,8 +4,8 @@ import './TechnologyPage.css';
 import SmartLightNavbar from './SmartLightNavbar';
 import SmartLightFooter from './SmartLightFooter';
 
-const Topografia = import.meta.env.BASE_URL + 'tech2.png';
-const CollabVideo = import.meta.env.BASE_URL + 'VideoCC.mp4';
+import Topografia from '../../assets/tech2.png';
+import CollabVideo from '../../assets/VideoCC.mp4';
 
 const TechnologyPage = () => {
     const navigate = useNavigate();

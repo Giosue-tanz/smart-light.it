@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ContactPage.css';
 import SmartLightNavbar from './SmartLightNavbar';
 import SmartLightFooter from './SmartLightFooter';
-const ContactVideo = import.meta.env.BASE_URL + 'VideoC4.mp4';
+import ContactVideo from '../../assets/VideoC4.mp4';
 
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOa__VV7IAM4QaC4s7JBZAXX3SrpkNWMw3Bq9s5NDb_dRqqB4ORAkTQzgre3B1hdJO/exec';
 

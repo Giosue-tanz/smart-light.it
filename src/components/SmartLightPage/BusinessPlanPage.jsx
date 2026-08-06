@@ -4,8 +4,8 @@ import './BusinessPlanPage.css';
 import SmartLightNavbar from './SmartLightNavbar';
 import SmartLightFooter from './SmartLightFooter';
 
-const SmartPdf = import.meta.env.BASE_URL + 'Smartlight.pdf';
-const CollabVideo = import.meta.env.BASE_URL + 'VideoCC.mp4';
+import SmartPdf from '../../assets/Smartlight.pdf';
+import CollabVideo from '../../assets/VideoCC.mp4';
 
 const BusinessPlanPage = () => {
     const navigate = useNavigate();
