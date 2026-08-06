@@ -56,13 +56,14 @@ const ContactPage = () => {
 
             <section className="contact-hero">
                 <video
-                    src={ContactVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
                     className="contact-hero-video"
-                />
+                >
+                    <source src={ContactVideo} type="video/mp4" />
+                </video>
                 <div className="contact-hero-overlay"></div>
                 <div className="contact-hero-content">
                     <h1 className="contact-hero-title">CONTACT</h1>

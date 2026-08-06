@@ -103,7 +103,6 @@ export default function SmartLightPage() {
             {/* Cover in alto - ora con layout split */}
             <section id="smartlight-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '0ms' }}>
                 <video
-                    src={CoverVideo}
                     className={`smartlight-cover-video-bg ${coverLoaded ? 'loaded' : 'loading'}`}
                     autoPlay
                     loop
@@ -111,7 +110,9 @@ export default function SmartLightPage() {
                     playsInline
                     poster={Topografia}
                     onLoadedData={() => setCoverLoaded(true)}
-                />
+                >
+                    <source src={CoverVideo} type="video/mp4" />
+                </video>
                 <div className="smartlight-cover-overlay"></div>
                 <div className="smartlight-cover-container">
                     <div className="smartlight-cover-content">
@@ -132,7 +133,6 @@ export default function SmartLightPage() {
             {/* Combined Cover - Goals + Problem/Opportunity (Video C3) */}
             <section id="smartlight-combined-cover" className="smartlight-cover observe-animate" style={{ '--animate-delay': '150ms' }}>
                 <video
-                    src={ProblemCoverVideo}
                     className={`smartlight-cover-video-bg ${problemCoverLoaded ? 'loaded' : 'loading'}`}
                     autoPlay
                     loop
@@ -140,7 +140,9 @@ export default function SmartLightPage() {
                     playsInline
                     poster={BiciBg}
                     onLoadedData={() => setProblemCoverLoaded(true)}
-                />
+                >
+                    <source src={ProblemCoverVideo} type="video/mp4" />
+                </video>
                 <div className="smartlight-cover-overlay" style={{ background: 'rgba(10, 10, 10, 0.65)' }}></div>
                 <div className="smartlight-cover-container combined-layout">
                     {/* Part 1: Goals */}
@@ -224,7 +226,6 @@ export default function SmartLightPage() {
             {/* Quinta Cover - Business Model */}
             <section id="smartlight-business-model" className="smartlight-cover observe-animate" style={{ '--animate-delay': '230ms' }}>
                 <video
-                    src={BusinessModelVideo}
                     className={`smartlight-cover-video-bg ${businessModelLoaded ? 'loaded' : 'loading'}`}
                     autoPlay
                     loop
@@ -232,7 +233,9 @@ export default function SmartLightPage() {
                     playsInline
                     poster={BiciBg}
                     onLoadedData={() => setBusinessModelLoaded(true)}
-                />
+                >
+                    <source src={BusinessModelVideo} type="video/mp4" />
+                </video>
                 <div className="smartlight-cover-overlay" style={{ background: 'rgba(0, 0, 0, 0.6)' }}></div>
                 <div className="smartlight-cover-container">
                     <div className="smartlight-cover-content-centered">
